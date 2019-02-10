@@ -17,7 +17,7 @@ public class Fibonacci {
     public long fibonacci(int n){
         global_count++;
         if(n<=1){
-            return 1;
+            return n;
         }else {
             return fibonacci(n-1) + fibonacci(n-2);
         }
@@ -42,7 +42,7 @@ public class Fibonacci {
         global_dp_count++;
         if(lookup[n] ==0) {
             if (n <= 1) {
-                lookup[n] = 1;
+                lookup[n] = n;
             } else {
                 lookup[n] = fibonacci_with_dp(n - 1) + fibonacci_with_dp(n - 2);
             }
